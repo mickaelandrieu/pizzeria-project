@@ -2,11 +2,7 @@ var formManager = {
     'init': function init() {
         var self = this;
         var $collectionHolder = $('#pizza_ingredients');
-        var sortedItems = $collectionHolder.sortable({
-            update: function(event, ui) {
-                self.updatePositions();
-            }
-        });
+        var sortedItems = $collectionHolder.sortable();
         var $addIngredientLink = $('<a href="#" class="add_ingredient_link">Add an ingredient</a>');
         var $newLinkLi = $('<li></li>').append($addIngredientLink);
 
@@ -26,9 +22,5 @@ var formManager = {
     
         var $newFormBlock = $('<div></div>').append(newForm);
         $newLinkLi.before($newFormBlock);
-    },
-    'updatePositions': function updatePositions() {
-        var sortedIDs = $('#pizza_ingredients').sortable( "toArray" );
-        console.log(sortedIDs);
     }
 };

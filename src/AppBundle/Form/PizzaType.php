@@ -36,7 +36,6 @@ class PizzaType extends AbstractType
                 // we affect each ingredient to his pizza
                 $pizza = $event->getData();
 
-                dump($pizza);
                 foreach ($pizza->getIngredients() as $ingredient) {
                     $ingredient->setPosition((int) $ingredient->getPosition());
                     $ingredient->setPizza($pizza);
