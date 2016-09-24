@@ -89,7 +89,8 @@ class Pizza
 
     public function removeIngredient(PizzaIngredient $ingredient)
     {
-        $this->ingredients->remove($ingredient);
+        $this->ingredients->removeElement($ingredient);
+        $ingredient->remove();
 
         return $this;
     }

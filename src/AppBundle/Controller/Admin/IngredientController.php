@@ -36,7 +36,7 @@ class IngredientController extends Controller
     public function newAction(Request $request)
     {
         $ingredient = new Ingredient();
-        $form = $this->createForm(IngredientType::class, $pizza);
+        $form = $this->createForm(IngredientType::class, $ingredient);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -44,7 +44,7 @@ class IngredientController extends Controller
             $em->persist($ingredient);
             $em->flush();
 
-            return $this->redirectToRoute('ingredient_show', array('id' => $pizza->getId()));
+            return $this->redirectToRoute('ingredient_show', array('id' => $ingredient->getId()));
         }
 
         return $this->render('admin/ingredient/new.html.twig', array(

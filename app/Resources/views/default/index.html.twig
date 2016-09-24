@@ -2,43 +2,41 @@
 {% import "::macros/common.html.twig" as common %}
 
 {% block body %}
-    <div id="wrapper" class="container">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Exoclick pizzeria!</h1>
-            </div>
-
-            <div id="pizzas">
-                <table class="table table-bordered">
-                    <caption>Available pizzas</caption>
-                    {% for pizza in pizzas %}
-                        <tr>
-                            <td>
-                                <b>{{ pizza.name }}</b> ({{ common.listIngredients(pizza.ingredients)}})
-                            </td>
-                            <td>
-                                {{ pizza.sellingPrice }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-
-            <div id="ingredients">
-                <table class="table">
-                    <caption>Available ingredients</caption>
-                    {% for ingredient in ingredients %}
-                        <tr>
-                            <td>
-                                {{ ingredient.name }}
-                            </td>
-                            <td>
-                                {{ ingredient.costPrice }}
-                            </td>
-                        </tr>
-                    {% endfor %}
-                </table>
-            </div>
-        </div>
+<div id="container">
+    <div id="welcome">
+        <h1><span>Welcome to</span> Exoclick pizzeria!</h1>
     </div>
+
+    <div id="pizzas">
+        <table class="table table-bordered">
+            <caption>Available pizzas</caption>
+            {% for pizza in pizzas %}
+                <tr>
+                    <td>
+                        <b>{{ pizza.name }}</b> ({{ common.listIngredients(pizza.ingredients)}})
+                    </td>
+                    <td>
+                        {{ pizza.sellingPrice }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+    <div id="ingredients">
+        <table class="table">
+            <caption>Available ingredients</caption>
+            {% for ingredient in ingredients %}
+                <tr>
+                    <td>
+                        {{ ingredient.name }}
+                    </td>
+                    <td>
+                        {{ ingredient.costPrice }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+</div>
 {% endblock %}

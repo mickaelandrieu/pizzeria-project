@@ -14,7 +14,17 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <div id="wrapper" class="container">
+            {% block body %}{% endblock %}
+            <footer>
+                <hr />
+                <ul class="list-inline">
+                    <li><a href="{{ path('homepage') }}">Homepage</a></li>
+                    <li><a href="{{ path('ingredient_index') }}">Ingredients</a></li>
+                    <li><a href="{{ path('pizza_index') }}">Pizzas</a></li>
+                </ul>
+            </footer>
+        </div>
         {% block javascripts %}
             <script
                 src="https://code.jquery.com/jquery-3.1.1.min.js"

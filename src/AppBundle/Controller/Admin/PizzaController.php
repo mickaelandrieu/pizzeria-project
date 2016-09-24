@@ -80,8 +80,9 @@ class PizzaController extends Controller
         if ($editForm->isSubmitted() && $editForm->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($pizza);
+            $ingredients = $pizza->getIngredients();
 
-            foreach ($pizza->getIngredients() as $ingredient) {
+            foreach ($ingredients as $ingredient) {
                 $em->persist($ingredient);
             }
             $em->flush();

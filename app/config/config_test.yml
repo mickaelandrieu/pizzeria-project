@@ -14,3 +14,7 @@ web_profiler:
 
 swiftmailer:
     disable_delivery: true
+
+parameters:
+    test_user: "admin"
+    test_password: "exoclick"

@@ -73,4 +73,9 @@ class PizzaIngredient
     {
         return $this->pizza;
     }
+
+    public function remove()
+    {
+        $this->pizza = null;
+    }
 }

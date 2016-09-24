@@ -5,6 +5,10 @@ var formManager = {
         var sortedItems = $collectionHolder.sortable();
         var $addIngredientLink = $('<a href="#" class="add_ingredient_link">Add an ingredient</a>');
         var $newLinkLi = $('<li></li>').append($addIngredientLink);
+        
+        $collectionHolder.find('div.ui-sortable-handle').each(function() {
+            self.addDeleteLink($(this));
+        });
 
         $collectionHolder.append($newLinkLi);
 
@@ -22,5 +26,14 @@ var formManager = {
     
         var $newFormBlock = $('<div></div>').append(newForm);
         $newLinkLi.before($newFormBlock);
+    },
+    'addDeleteLink': function addDeleteLink($form) {
+        var $removeLink = $('<a href="#">delete this ingredient</a>');
+        $form.append($removeLink);
+        
+        $removeLink.on('click', function(e) {
+            e.preventDefault();
+            $form.remove();
+    });
     }
 };
