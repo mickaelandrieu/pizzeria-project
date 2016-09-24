@@ -1,0 +1,48 @@
+[24-Sep-2016 15:14:03 UTC] PHP Fatal error:  Class 'AppBundle\Controller\Ingredient' not found in /home/ubuntu/workspace/pizzeria/src/AppBundle/Controller/DefaultController.php on line 17
+[24-Sep-2016 15:14:03 UTC] PHP Stack trace:
+[24-Sep-2016 15:14:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/pizzeria/web/app.php:0
+[24-Sep-2016 15:14:03 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/pizzeria/web/app.php:18
+[24-Sep-2016 15:14:03 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/pizzeria/var/bootstrap.php.cache:1443
+[24-Sep-2016 15:14:03 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:68
+[24-Sep-2016 15:14:03 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153}() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153
+[24-Sep-2016 15:14:03 UTC] PHP   6. AppBundle\Controller\DefaultController->indexAction() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153
+[24-Sep-2016 16:01:03 UTC] PHP Fatal error:  Call to undefined method AppBundle\Entity\PizzaIngredient::GetCostPrice() in /home/ubuntu/workspace/pizzeria/src/AppBundle/Entity/Pizza.php on line 70
+[24-Sep-2016 16:01:03 UTC] PHP Stack trace:
+[24-Sep-2016 16:01:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/pizzeria/web/app_dev.php:0
+[24-Sep-2016 16:01:03 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/pizzeria/web/app_dev.php:30
+[24-Sep-2016 16:01:03 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[24-Sep-2016 16:01:03 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:68
+[24-Sep-2016 16:01:03 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153}() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153
+[24-Sep-2016 16:01:03 UTC] PHP   6. AppBundle\Controller\DefaultController->indexAction() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153
+[24-Sep-2016 16:01:03 UTC] PHP   7. Symfony\Bundle\FrameworkBundle\Controller\Controller->render() /home/ubuntu/workspace/pizzeria/src/AppBundle/Controller/DefaultController.php:30
+[24-Sep-2016 16:01:03 UTC] PHP   8. Symfony\Bundle\TwigBundle\TwigEngine->renderResponse() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Controller/Controller.php:212
+[24-Sep-2016 16:01:03 UTC] PHP   9. Symfony\Bundle\TwigBundle\TwigEngine->render() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/TwigEngine.php:75
+[24-Sep-2016 16:01:03 UTC] PHP  10. Symfony\Bridge\Twig\TwigEngine->render() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/TwigEngine.php:50
+[24-Sep-2016 16:01:03 UTC] PHP  11. Twig_Template->render() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Bridge/Twig/TwigEngine.php:50
+[24-Sep-2016 16:01:03 UTC] PHP  12. Twig_Template->display() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5328
+[24-Sep-2016 16:01:03 UTC] PHP  13. Twig_Template->displayWithErrorHandling() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5321
+[24-Sep-2016 16:01:03 UTC] PHP  14. __TwigTemplate_218c4099ee7b4b9a6a56e53ae2b52f3378f70d50eeb3d42dc38d36952031c795->doDisplay() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5345
+[24-Sep-2016 16:01:03 UTC] PHP  15. Twig_Template->display() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php(3665) : eval()'d code:27
+[24-Sep-2016 16:01:03 UTC] PHP  16. Twig_Template->displayWithErrorHandling() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5321
+[24-Sep-2016 16:01:03 UTC] PHP  17. __TwigTemplate_c27f93eb1eb6f70f96bc2497e9c1dc0ae3381484d209a45ba6b5018f72610287->doDisplay() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5345
+[24-Sep-2016 16:01:03 UTC] PHP  18. Twig_Template->displayBlock() /home/ubuntu/workspace/pizzeria/var/cache/dev/twig/48/48fdecbc900c4351cd828c623e6308a269210d187c52aa97b37b7b677374dacd.php:45
+[24-Sep-2016 16:01:03 UTC] PHP  19. __TwigTemplate_218c4099ee7b4b9a6a56e53ae2b52f3378f70d50eeb3d42dc38d36952031c795->block_body() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5253
+[24-Sep-2016 16:01:03 UTC] PHP  20. Twig_Template->getAttribute() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php(3665) : eval()'d code:97
+[24-Sep-2016 16:01:03 UTC] PHP  21. call_user_func_array:{/home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5480}() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5480
+[24-Sep-2016 16:01:03 UTC] PHP  22. AppBundle\Entity\Pizza->getSellingPrice() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:5480
+[24-Sep-2016 18:35:20 UTC] PHP Fatal error:  Call to a member function getIngredients() on array in /home/ubuntu/workspace/pizzeria/src/AppBundle/Form/PizzaType.php on line 27
+[24-Sep-2016 18:35:20 UTC] PHP Stack trace:
+[24-Sep-2016 18:35:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/pizzeria/web/app_dev.php:0
+[24-Sep-2016 18:35:20 UTC] PHP   2. Symfony\Component\HttpKernel\Kernel->handle() /home/ubuntu/workspace/pizzeria/web/app_dev.php:30
+[24-Sep-2016 18:35:20 UTC] PHP   3. Symfony\Component\HttpKernel\HttpKernel->handle() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/Kernel.php:169
+[24-Sep-2016 18:35:20 UTC] PHP   4. Symfony\Component\HttpKernel\HttpKernel->handleRaw() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:68
+[24-Sep-2016 18:35:20 UTC] PHP   5. call_user_func_array:{/home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153}() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153
+[24-Sep-2016 18:35:20 UTC] PHP   6. AppBundle\Controller\Admin\PizzaController->editAction() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/HttpKernel/HttpKernel.php:153
+[24-Sep-2016 18:35:20 UTC] PHP   7. Symfony\Component\Form\Form->handleRequest() /home/ubuntu/workspace/pizzeria/src/AppBundle/Controller/Admin/PizzaController.php:79
+[24-Sep-2016 18:35:20 UTC] PHP   8. Symfony\Component\Form\Extension\HttpFoundation\HttpFoundationRequestHandler->handleRequest() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php:488
+[24-Sep-2016 18:35:20 UTC] PHP   9. Symfony\Component\Form\Form->submit() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Form/Extension/HttpFoundation/HttpFoundationRequestHandler.php:113
+[24-Sep-2016 18:35:20 UTC] PHP  10. Symfony\Component\EventDispatcher\ImmutableEventDispatcher->dispatch() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/Form/Form.php:541
+[24-Sep-2016 18:35:20 UTC] PHP  11. Symfony\Component\EventDispatcher\EventDispatcher->dispatch() /home/ubuntu/workspace/pizzeria/vendor/symfony/symfony/src/Symfony/Component/EventDispatcher/ImmutableEventDispatcher.php:43
+[24-Sep-2016 18:35:20 UTC] PHP  12. Symfony\Component\EventDispatcher\EventDispatcher->doDispatch() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:2082
+[24-Sep-2016 18:35:20 UTC] PHP  13. call_user_func:{/home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:2167}() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:2167
+[24-Sep-2016 18:35:20 UTC] PHP  14. AppBundle\Form\PizzaType->AppBundle\Form\{closure}() /home/ubuntu/workspace/pizzeria/var/cache/dev/classes.php:2167

@@ -1,0 +1,6 @@
+{% macro listIngredients(ingredients) %}
+    {% for ingredient in ingredients %}
+        {{ ingredient.ingredient.name }}({{ ingredient.ingredient.costPrice }})
+        {% if not loop.last %},{% endif %} 
+    {% endfor %}
+{% endmacro %}
