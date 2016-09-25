@@ -1,4 +1,5 @@
 {% extends 'base.html.twig' %}
+{% import "::macros/common.html.twig" as common %}
 
 {% block body %}
     <h1>Pizza</h1>
@@ -12,6 +13,10 @@
             <tr>
                 <th>Name</th>
                 <td>{{ pizza.name }}</td>
+            </tr>
+                <tr>
+                <th>Ingredients</th>
+                <td>{{ common.listIngredients(pizza.ingredients)}}</td>
             </tr>
         </tbody>
     </table>

@@ -20,14 +20,14 @@ class PizzaTest extends \PHPUnit_Framework_TestCase
         $pizza = new Pizza();
         $tomato = $this->createIngredient('tomato', 1.0);
         $pizza->addIngredient($this->createPizzaIngredient($tomato, 1));
-        
+
         $this->assertEquals(1.5, $pizza->getSellingPrice()->getAmount());
     }
     
     private function createIngredient($name, $price)
     {
         $ingredient = new Ingredient();
-        
+
         return $ingredient->setName($name)
             ->setCostPrice(new Price($price))
         ;
@@ -36,7 +36,7 @@ class PizzaTest extends \PHPUnit_Framework_TestCase
     private function createPizzaIngredient(Ingredient $ingredient, $position)
     {
         $pizzaIngredient = new PizzaIngredient();
-        
+
         return $pizzaIngredient->setIngredient($ingredient)
             ->setPosition($position)
         ;
