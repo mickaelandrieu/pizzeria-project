@@ -1,7 +1,14 @@
 {
-    "name": "ubuntu/pizzeria",
-    "license": "proprietary",
+    "name": "mickaelandrieu/pizzeria",
+    "description": "Project to play with Symfony3, don't use it!",
+    "license": "MIT",
     "type": "project",
+    "authors": [
+        {
+            "name": "Mickaël Andrieu",
+            "email": "andrieu.travail@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "": "src/"
