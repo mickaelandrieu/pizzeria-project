@@ -1,0 +1,34 @@
+#!/bin/bash
+set -e
+
+if [[ -z "$1" ]]
+then
+    echo "You should specify an environment (dev, test, prod) as first argument";
+    exit;
+fi;
+
+SF3_ENV="$1";
+
+rm -rf var/cache/*
+
+# Detect composer binary
+    if which composer >/dev/null; then
+        composer='composer'
+    elif which composer.phar >/dev/null; then
+        composer='composer.phar'
+    else
+        # Install composer
+        curl -s http://getcomposer.org/installer | php >/dev/null
+        composer='php composer.phar'
+    fi
+
+    # Install or update packages specified in the lock file
+    if [ ! -d vendor ]; then
+        $composer install
+    fi
+
+# Database
+bin/console do:da:dr --env=$SF3_ENV --force || true
+bin/console do:da:cr --env=$SF3_ENV
+bin/console do:sc:cr --env=$SF3_ENV
+bin/console do:fi:lo --fixtures=src/AppBundle/DataFixtures --env=$SF3_ENV -n
