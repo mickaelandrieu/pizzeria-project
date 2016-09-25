@@ -5,7 +5,7 @@ Pizzeria
 
 Use ``admin|exoclick`` credentials
 
-## Load fixtures
+## Install project
 
 ```bash
 ./bin/reset <dev|prod|test>
