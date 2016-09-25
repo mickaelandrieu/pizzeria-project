@@ -15,6 +15,14 @@ Use ``admin|exoclick`` credentials
 
 Yes.
 
-```
+```bash
 ./vendor/bin/phpunit
 ```
+
+## No Apache/Nginx ?
+
+```bash
+./bin/console server:run
+```
+
+Enjoy!
